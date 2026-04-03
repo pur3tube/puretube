@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #000; width: 100vw; height: 100vh; overflow: hidden; }
+    iframe { width: 100%; height: 100%; border: none; }
+  </style>
+</head>
+<body>
+  <iframe 
+    id="player"
+    allowfullscreen 
+    allow="autoplay; fullscreen; encrypted-media">
+  </iframe>
+  <script>
+    const v = new URLSearchParams(location.search).get('v');
+    if (v) document.getElementById('player').src = 
+      'https://www.youtube-nocookie.com/embed/' + v + '?autoplay=1';
+  </script>
+</body>
+</html>
+```
+
+- Click **Commit changes**
+
+---
+
+**4. Enable GitHub Pages:**
+- Go to **Settings** tab in your repository
+- Click **Pages** in the left sidebar
+- Under **Source** select **Deploy from a branch**
+- Select **main** branch
+- Click **Save**
+
+---
+
+After a minute or two your site will be live at:
+```
+https://YOUR-USERNAME.github.io/puretube
